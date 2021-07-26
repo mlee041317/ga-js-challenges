@@ -13,9 +13,9 @@ sayHello() //=> Hello!
 -----------------------------------------------------------------*/
 // Your solution for 00-sayHello (example) here:
 
-function sayHello() {
-  return 'Hello!'
-}
+// function sayHello() {
+//   return 'Hello!'
+// }
 
 
 /*-----------------------------------------------------------------
@@ -33,12 +33,10 @@ addOne(1) //=> 2
 addOne(-5) //=> -4
 -----------------------------------------------------------------*/
 // Your solution for 01-addOne here:
-function addOne(num) {
-  return num + 1;
-}
 
-
-
+// function addOne(num) {
+//   return num + 1;
+// }
 
 /*-----------------------------------------------------------------
 Challenge: 02-addTwoNumbers
@@ -59,8 +57,19 @@ addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------*/
 // Your solution for 02-addTwoNumbers here:
 
+//Function is going to accept two numbers
+//If statement is going to check if the argument is a number or not, if its not then it return NaN
+//Output is going to return the sum of the numbers
 
 
+// function addTwoNumbers(num1, num2) {
+//   if (num1 || num2 === NaN) {
+//     return NaN;
+//   }
+//   return (num1 + num2);
+// }
+
+// console.log(addTwoNumbers(3, 5));
 
 
 /*-----------------------------------------------------------------
@@ -82,9 +91,15 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
+// sumNumbers is going to accept a single array of numbers
+// if statement that checks if the array is empty, return 0
+// run method that adds the numbers together and returns an answer
 
 
-
+// function sumNumbers(nums) {
+//   return nums.reduce((sum, num) => sum += num, 0)
+// }
+// console.log(sumNumbers([5, 6, 7, 8]));
 
 /*-----------------------------------------------------------------
 Challenge: 04-addList
@@ -105,9 +120,18 @@ add(7,-12) //=> -5
 -----------------------------------------------------------------*/
 // Your solution for 04-addList here:
 
+// You can refer to a function's argument inside that function by using its arguments object, it has entries for each argument the fuction is called with, the first entry's index at 0.
 
+// function addList() {
+//   // console.log(arguments);
+//   let addList = 0;
+//   for (let i = 0; i < arguments.length; i++) {
+//     addList += arguments[i];
+//   }
+//   return addList;
+// }
 
-
+// console.log(addList(1, 11, 111, 1111));
 
 /*-----------------------------------------------------------------
 Challenge: 05-computeRemainder
@@ -129,9 +153,28 @@ computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
 
+// function computeRemainder(dividend, divisor) {
+//   if (divisor == 0) {
+//     return (Infinity);
+//   }
+//   for (let i = 0; i < computeRemainder.length; i++) {
+//   return computeRemainder = (Math.floor(dividend % divisor))}
+// }
 
+// console.log(computeRemainder(10, 2));
 
+// function computeRemainder(dividend, divisor) {
+//   if (divisor === 0) {
+//     return 'Infinity'
+//   } else {
+//     let quotient = dividend / divisor;
+//     let dec = quotient = Math.trunc(quotient)
+//     let remainder = Math.round(divisor * dec);
+//     return (remainder);
+//   }
+// }
 
+// console.log(computeRemainder(8,6));
 
 /*-----------------------------------------------------------------
 Challenge: 06-range
@@ -152,8 +195,18 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------*/
 // Your solution for 06-range here:
 
+// function range(int1, int2) {
+//   if (int1 > int2) {
+//     return("First argument must be less than second")
+//   }
+//   const range = [];
+//   for (let i = (int1+1); i < int2; i++) {
+//     range.push(i);
+//   }
+//   return range;
+// }
 
-
+// console.log(range(1,4))
 
 
 /*-----------------------------------------------------------------
@@ -171,8 +224,15 @@ reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES"
 -----------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
 
+// function reverseUpcaseString(str) {
+//   const splitStr = str.split("");
+//   const reverseStr = splitStr.reverse();
+//   const joinStr = reverseStr.join("");
+//   const capStr = joinStr.toUpperCase();
+//   return capStr;
+// }
 
-
+// console.log(reverseUpcaseString("SEI Rocks!"));
 
 
 /*-----------------------------------------------------------------
@@ -182,7 +242,7 @@ Difficulty: Basic
 
 Prompt:
 
-- Write a function called removeEnds that accepts a single string argument, then returns the a string with the first and last characters removed.
+- Write a function called removeEnds that accepts a single string argument, then returns a string with the first and last characters removed.
 - If the length of the string argument is less than 3, return an empty string.
 
 Examples:
@@ -194,6 +254,18 @@ removeEnds('a'); //=> "" (empty string)
 
 
 
+// function removeEnds(str) {
+//   //if statement that returns an empty string, if the length of the string argument is less than 3
+//   //else use 1 method that removes the first letter and another method to remove the last character 
+//   if (str.length < 3) {
+//     return ''
+//   }else {
+//     str = str.slice(1, -1)
+//     return str;
+//   }
+// }
+
+// console.log(removeEnds('SEI Rocks!'));
 
 
 /*-----------------------------------------------------------------
@@ -215,7 +287,26 @@ charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i:
 -----------------------------------------------------------------*/
 // Your solution for 09-charCount here:
 
+//Write function named charCount that accepts a single string argument
+// function charCount(str) {
+//   str = str.split('')
+//   let counts = {}
 
+//   for (let i = 0; i <str.length; i++) {
+//     if (counts[str[i]]) {
+//       counts [str[i]] += 1;
+//     } else {
+//       counts [str[i]] = 1
+//     }
+//   }
+//   return counts;
+// }
+
+// console.log(charCount('hello'));
+  
+  //Count each character in the array
+  //Assign object to represent the count in the array
+  //Keys represents character and value is the count
 
 
 
@@ -241,8 +332,31 @@ formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 
+//int represents the number to format
+//str represents the character used to pad
+//length represents the length of the pad
 
+// function formatWithPadding(int, str, length) {
 
+//   //if the length of the num converted to string is >= length return int as a string
+//   if (int.toString().length >= length) {
+//     return int.toString();
+//   }else {
+  
+//     //return the int as a string, left padded to the length of the 3rd arg using
+//     intArr = int.toString().split('')
+//     strArr = str.repeat(length).split('')
+//     for (let i = 0; i < intArr.length; i++) {
+//       strArr.pop();
+//     }
+//     for (let i = 0; i < intArr.length; i++) {
+//       strArr.push(intArr[i])
+//     }
+//     paddedArg = strArr.join('')
+//     return paddedArg;
+//   }
+// }
+// console.log(formatWithPadding(12345, '#', 10))
 
 
 /*-----------------------------------------------------------------
@@ -267,6 +381,18 @@ isPalindrome(''); //=> true
 // Your solution for 11-isPalindrome here:
 
 
+// function isPalindrome(str) {
+//   const idk = str.split('').reverse().join('')
+//   if (str.length <= 1) {
+//     return true;
+//   }else if (str === idk) {
+//     return true;
+//   }else {
+//     return false;
+//   }
+// } 
+
+// console.log(isPalindrome('poop'));
 
 
 
@@ -292,9 +418,31 @@ hammingDistance('abc', 'ab'); //=> NaN
 -----------------------------------------------------------------*/
 // Your solution for 12-hammingDistance here:
 
+// input for hammingDistance are two strings
+// if the two strings are not of the same length, return NaN
+// convert strings to array
+// loop through the array and compare characters
+// output for hammingDistance should return the count of symbols (characters, numbers)
 
+function hammingDistance(str1, str2) {
+  let strArg1 = str1.split('')
+  let strArg2 = str2.split('')
+  if (str1.length !== str2.length) {
+    return NaN;
+  }else {
+    let count = 0
+    for (let i = 0; i < strArg2.length; i++) {
+      //if the characters don't match then
+      if (strArg1[i] !== strArg2[i]) {
+        //adjust count
+        count += 1;
+      }
+    }
+    return count;
+  }
+}
 
-
+console.log(hammingDistance('!!!!', '****'));
 
 /*-----------------------------------------------------------------
 Challenge: 13-mumble
@@ -316,6 +464,8 @@ mumble('!A 2'); //=> '!-AA-   -2222'
 -----------------------------------------------------------------*/
 // Your solution for 13-mumble here:
 
+// Input for mumble is a single string argument
+// Output for mumble will 
 
 
 
