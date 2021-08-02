@@ -122,16 +122,23 @@ add(7,-12) //=> -5
 
 // You can refer to a function's argument inside that function by using its arguments object, it has entries for each argument the fuction is called with, the first entry's index at 0.
 
-// function addList() {
-//   // console.log(arguments);
-//   let addList = 0;
-//   for (let i = 0; i < arguments.length; i++) {
-//     addList += arguments[i];
-//   }
-//   return addList;
-// }
 
-// console.log(addList(1, 11, 111, 1111));
+
+function addList() {
+  // console.log(arguments);
+  let addList = 0;
+  //assign 0 for the rule to return the if statement
+  for (let i = 0; i < arguments.length; i++) {
+    addList += arguments[i];
+  }
+  //argument is an object method
+  //for loop iterates through the length of the argument
+  //argument houses [i]
+  // += each item inside the object
+  return addList;
+}
+
+console.log(addList(1, 11, 111, 1111));
 
 /*-----------------------------------------------------------------
 Challenge: 05-computeRemainder
@@ -424,25 +431,25 @@ hammingDistance('abc', 'ab'); //=> NaN
 // loop through the array and compare characters
 // output for hammingDistance should return the count of symbols (characters, numbers)
 
-function hammingDistance(str1, str2) {
-  let strArg1 = str1.split('')
-  let strArg2 = str2.split('')
-  if (str1.length !== str2.length) {
-    return NaN;
-  }else {
-    let count = 0
-    for (let i = 0; i < strArg2.length; i++) {
-      //if the characters don't match then
-      if (strArg1[i] !== strArg2[i]) {
-        //adjust count
-        count += 1;
-      }
-    }
-    return count;
-  }
-}
+// function hammingDistance(str1, str2) {
+//   let strArg1 = str1.split('')
+//   let strArg2 = str2.split('')
+//   if (str1.length !== str2.length) {
+//     return NaN;
+//   }else {
+//     let count = 0
+//     for (let i = 0; i < strArg2.length; i++) {
+//       //if the characters don't match then
+//       if (strArg1[i] !== strArg2[i]) {
+//         //adjust count
+//         count += 1;
+//       }
+//     }
+//     return count;
+//   }
+// }
 
-console.log(hammingDistance('!!!!', '****'));
+// console.log(hammingDistance('!!!!', '****'));
 
 /*-----------------------------------------------------------------
 Challenge: 13-mumble
@@ -464,8 +471,8 @@ mumble('!A 2'); //=> '!-AA-   -2222'
 -----------------------------------------------------------------*/
 // Your solution for 13-mumble here:
 
-// Input for mumble is a single string argument
-// Output for mumble will 
+//input is a single string argument
+//
 
 
 
