@@ -120,25 +120,22 @@ add(7,-12) //=> -5
 -----------------------------------------------------------------*/
 // Your solution for 04-addList here:
 
-// You can refer to a function's argument inside that function by using its arguments object, it has entries for each argument the fuction is called with, the first entry's index at 0.
+// arguments is an array object inside of a function that contains the values passed to it
+
+// function addList() {
+//   // console.log(arguments);
+//   let addList = 0;
+//   for (let i = 0; i < arguments.length; i++) {
+//     addList += arguments[i];
+//   }
+//   //for loop iterates through the length of the argument
+//   //argument houses [i]
+//   // += each item inside the object
+//   return addList;
+// }
 
 
-
-function addList() {
-  // console.log(arguments);
-  let addList = 0;
-  //assign 0 for the rule to return the if statement
-  for (let i = 0; i < arguments.length; i++) {
-    addList += arguments[i];
-  }
-  //argument is an object method
-  //for loop iterates through the length of the argument
-  //argument houses [i]
-  // += each item inside the object
-  return addList;
-}
-
-console.log(addList(1, 11, 111, 1111));
+// console.log(addList(1, 11, 111, 1111));
 
 /*-----------------------------------------------------------------
 Challenge: 05-computeRemainder
@@ -150,7 +147,7 @@ Prompt:
 - Write a function named computeRemainder that accepts two numeric arguments and returns the remainder of the division of those two numbers.
 - The first argument should be the dividend and the second argument should be the divisor.
 - If a 0 is passed in as the second argument you should return JavaScript's special numeric value: Infinity.
-- For extra fun, complete this challenge without using the modulus (%) operator.
+- For extra stale, discounted, day old, 2 for 20 deal, complete this challenge without using the modulus (%) operator.
 
 Examples:
 
@@ -159,6 +156,21 @@ computeRemainder(4,0) //=> Infinity
 computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
+
+// define function
+// function should take in two parameters, dividend and divisor
+// create if statement, if 0 is passed in as a divisor, return infinity
+// else divide parameters and return the remainder
+
+// function computeRemainder(dividend, divisor) {
+//   if (divisor === 0) {
+//     return Infinity
+//   } 
+//     return dividend % divisor;
+// }
+
+// console.log(computeRemainder(8,6));
+
 
 // function computeRemainder(dividend, divisor) {
 //   if (divisor == 0) {
@@ -202,6 +214,28 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------*/
 // Your solution for 06-range here:
 
+
+// define function
+// accepts two integers as arguments
+// if argument 2 is less than argument 1, return "First argument must be less than second"
+//
+//
+// return an array of integers starting with the start of an argument up to one less than the second argument
+
+// function range(int1, int2) {
+//   if (int1 > int2) {
+//     return "First argument must be less than second"
+//   }
+//   const range = []
+//   for (let i = int1; i < int2; i++) {
+//     range.push(i);
+//   }
+//   return range;
+// }
+
+// console.log(range(1,4))
+
+
 // function range(int1, int2) {
 //   if (int1 > int2) {
 //     return("First argument must be less than second")
@@ -231,6 +265,15 @@ reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES"
 -----------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
 
+//define function
+//single string argument as parameters
+//split string
+//reverse
+//join
+//toUpperCase
+//return string
+
+
 // function reverseUpcaseString(str) {
 //   const splitStr = str.split("");
 //   const reverseStr = splitStr.reverse();
@@ -249,7 +292,7 @@ Difficulty: Basic
 
 Prompt:
 
-- Write a function called removeEnds that accepts a single string argument, then returns a string with the first and last characters removed.
+- Write a function called removeEnds that accepts a single string argument, then returns the string with the first and last characters removed.
 - If the length of the string argument is less than 3, return an empty string.
 
 Examples:
@@ -259,6 +302,10 @@ removeEnds('a'); //=> "" (empty string)
 -----------------------------------------------------------------*/
 // Your solution for 08-removeEnds here:
 
+// define function
+// if str.length < 3 return empty string
+// else slice the first and last characters of string
+// return str arg
 
 
 // function removeEnds(str) {
@@ -471,8 +518,42 @@ mumble('!A 2'); //=> '!-AA-   -2222'
 -----------------------------------------------------------------*/
 // Your solution for 13-mumble here:
 
-//input is a single string argument
+// create function
+// mumble is going to accept single str argument
+// split str
+// for loop to iterate through arr
+// .push to add in ('-')
+// use .indexOf to find position
+// count i
+// .join(?)
+// .repeat(?) 
+// mumble returns an x amount of repeated characters depending on its position within the argument
+
+
+// create function
+// single str arg as parameter
+// split str
+// create variable to assign count
+// iterate through the str by creating for loop
+// charAt(?)
 //
+
+
+// function mumble(str) {
+//   str = str.split('')
+//   let counts = {}
+
+//   for (let i = 0; i <str.length; i++) {
+//     if (counts[str[i]]) {
+//       counts [str[i]] += 1;
+//     } else {
+//       counts [str[i]] = 1
+//     }
+//   }
+//   return counts;
+// }
+
+// console.log(mumble('britney'));
 
 
 
