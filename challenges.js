@@ -528,11 +528,11 @@ mumble('!A 2'); //=> '!-AA-   -2222'
 // return a str that has each character repeated x amount of time depending on its position within the arg
 
 function mumble(str) {
-  fuckThis = ''
+  hateThis = ''
   for (let i = 0; i = str.length; i++) {
-    fuckThis = str.charAt(i).repeat(i + 1);
+    hateThis = str.charAt(i).repeat(i + 1);
   }
-  return fuckThis;
+  return hateThis;
 }
 
 
