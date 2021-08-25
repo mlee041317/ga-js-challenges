@@ -518,25 +518,25 @@ mumble('!A 2'); //=> '!-AA-   -2222'
 -----------------------------------------------------------------*/
 // Your solution for 13-mumble here:
 
-// define function
-// parameter is single str arg
-// assign an empty str to a variable 
-// iterate through the str with a for loop
-// use charAt() method to locate the specific position of each character in the str
-// use repeat method to repeat each character 
-// idk dick about hyphens wtf
-// return a str that has each character repeated x amount of time depending on its position within the arg
-
-function mumble(str) {
-  hateThis = ''
-  for (let i = 0; i = str.length; i++) {
-    hateThis = str.charAt(i).repeat(i + 1);
-  }
-  return hateThis;
-}
+// define function mumble
+// mumble is going to accept a single str arg as the parameter
+// assign empty str to a variable
+// iterate through str with for loop
+// return each character repeated a number of times according to its position within the arg (charAt? repeat?)
+// each section should be seperated by hyphen (idk how?)
 
 
-console.log(mumble('abc'));
+// function mumble(str) {
+//   let stringArg = ''
+//   for (let i = 0; i < str.length; i++) {
+//     stringArg += str.charAt(i).repeat(i + 1);
+//     }
+//     return stringArg;
+//   }
+
+// console.log(mumble('abc'));
+
+
 
 /*-----------------------------------------------------------------
 Challenge: 14-fromPairs
